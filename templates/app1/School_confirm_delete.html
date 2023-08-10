@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>school_delete</title>
+</head>
+<body>
+    <center>
+        <h1>delete form</h1>
+        <h1>are you sure to delete {{sdo.scname}}</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="submit" value="sure delete">
+        </form>
+
+<h1><a href="{% url 'School_list' %}">take back to list</a></h1>
+<h1><a href="{% url 'detail' pk=sdo.pk %}">take back to detail</a></h1>
+
+    </center>
+</body>
+</html>

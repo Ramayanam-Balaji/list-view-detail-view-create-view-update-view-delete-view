@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detail view</title>
+</head>
+<body>
+    <center>
+        <h1>name of  school {{sdo.scname}}</h1>
+        <h1>name of principal{{sdo.scprincipal}}</h1>
+        <h1>loaction is {{sdo.aclocation}}</h1>
+        
+        {% for  i in sdo.balaji.all %}
+        <h1>name of student is {{i.sname}}</h1>
+        <h1>age od student is {{i.sage}}</h1>
+        {% endfor %}
+
+
+    <h1><a href="{% url 'update' pk=sdo.pk %}">update</a></h1>
+    <h1><a href="{% url 'delete' pk=sdo.pk %}">delete</a></h1>
+    </center>
+</body>
+</html>
